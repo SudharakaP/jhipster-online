@@ -17,8 +17,8 @@ FROM adoptopenjdk:11-jre-hotspot
 ENV SPRING_OUTPUT_ANSI_ENABLED=ALWAYS \
     JHIPSTER_SLEEP=0 \
     JAVA_OPTS=""
-RUN apk update && \
-    apk add nodejs npm && \
+RUN apt-get update && \
+    apt-get nodejs npm && \
     npm install -g generator-jhipster@6.9.0
 CMD echo "The application will start in ${JHIPSTER_SLEEP}s..." && \
     sleep ${JHIPSTER_SLEEP} && \
