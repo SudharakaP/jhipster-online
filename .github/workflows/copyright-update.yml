@@ -36,6 +36,7 @@ jobs:
         with:
           find: "Copyright 2017-[0-9]+"
           replace: "Copyright 2017-2022"
+          include: test/
 
       # Create PR in jhipster-online with updated submodules
       - name: Create Pull Request
