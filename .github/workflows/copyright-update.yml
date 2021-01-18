@@ -17,9 +17,10 @@
 # limitations under the License.
 
 name: Copyright Update
-on:
-  schedule:
-    - cron: '0 0 31 12 *' # Repeats December 31st every year
+on: [push, pull_request]
+#on:
+#  schedule:
+#    - cron: '0 0 31 12 *' # Repeats December 31st every year
 jobs:
   pipeline:
     name: jhipster-online copyright update
