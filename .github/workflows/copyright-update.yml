@@ -36,7 +36,7 @@ jobs:
         run: |
           CURRENT_YEAR=$(date +'%Y')
           NEW_YEAR=$(($CURRENT_YEAR + 1))
-          grep -rlZ 'Copyright 2017-$CURRENT_YEAR' . | xargs -0 sed -i 's/Copyright 2017-$CURRENT_YEAR/Copyright 2017-$NEW_YEAR/g'
+          grep -rlZ 'Copyright 2017-$CURRENT_YEAR' /home/runner/work/jhipster-online/jhipster-online/ | xargs -0 sed -i 's/Copyright 2017-$CURRENT_YEAR/Copyright 2017-$NEW_YEAR/g'
 
       # Create PR in jhipster-online with updated submodules
       - name: Create Pull Request
